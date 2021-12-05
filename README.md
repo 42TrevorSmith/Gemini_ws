@@ -1,2 +1,2 @@
-# Gemini_ws
-This repository houses all code required for the Gemini project
+# gemini_ws
+honors excel gemini project code repo

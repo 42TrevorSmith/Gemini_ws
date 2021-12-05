@@ -1,0 +1,7 @@
+<launch>
+	<node name ="kinect_network" pkg="rosserial_python" type="serial_node.py" output="screen" args="tcp"/>
+	<node name="kinect_bridge" pkg="kinect_bridge" type="kinect_bridge" output="screen"/>
+	<node name="bridge_arduino" pkg="rosserial_python" type="serial_node.py" output="screen" args="/dev/ttyACM0"/>
+	<node name="wii_remote" pkg="wiimote" type="wiimote_node" />
+
+</launch>

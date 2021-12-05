@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="gemini_description">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="right_arm">
+        <link name="r_shoulder_ball" />
+        <link name="r_bicept" />
+        <link name="r_elbow_ball" />
+        <link name="r_forearm" />
+        <link name="r_wrist" />
+        <link name="r_hand" />
+        <joint name="rs1" />
+        <joint name="rs2" />
+        <joint name="re1" />
+        <joint name="re2" />
+        <joint name="rw1" />
+        <joint name="rw2" />
+    </group>
+    <group name="left_arm">
+        <link name="l_shoulder_ball" />
+        <link name="l_bicpet" />
+        <link name="l_elbow_ball" />
+        <link name="l_forearm" />
+        <link name="l_wrist" />
+        <link name="l_hand" />
+        <joint name="ls1" />
+        <joint name="ls2" />
+        <joint name="le1" />
+        <joint name="le2" />
+        <joint name="lw1" />
+        <joint name="lw2" />
+    </group>
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="right_hand" parent_link="r_hand" group="right_arm" />
+    <end_effector name="left_hand" parent_link="l_hand" group="left_arm" />
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="base_link" link2="l_shoulder_ball" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="r_shoulder_ball" reason="Adjacent" />
+    <disable_collisions link1="l_bicpet" link2="l_elbow_ball" reason="Adjacent" />
+    <disable_collisions link1="l_bicpet" link2="l_shoulder_ball" reason="Adjacent" />
+    <disable_collisions link1="l_bicpet" link2="r_bicept" reason="Never" />
+    <disable_collisions link1="l_bicpet" link2="r_shoulder_ball" reason="Never" />
+    <disable_collisions link1="l_elbow_ball" link2="l_forearm" reason="Adjacent" />
+    <disable_collisions link1="l_elbow_ball" link2="l_hand" reason="Never" />
+    <disable_collisions link1="l_elbow_ball" link2="l_shoulder_ball" reason="Never" />
+    <disable_collisions link1="l_elbow_ball" link2="l_wrist" reason="Never" />
+    <disable_collisions link1="l_elbow_ball" link2="r_shoulder_ball" reason="Never" />
+    <disable_collisions link1="l_forearm" link2="l_wrist" reason="Adjacent" />
+    <disable_collisions link1="l_hand" link2="l_wrist" reason="Adjacent" />
+    <disable_collisions link1="l_shoulder_ball" link2="r_bicept" reason="Never" />
+    <disable_collisions link1="l_shoulder_ball" link2="r_elbow_ball" reason="Never" />
+    <disable_collisions link1="l_shoulder_ball" link2="r_shoulder_ball" reason="Never" />
+    <disable_collisions link1="r_bicept" link2="r_elbow_ball" reason="Adjacent" />
+    <disable_collisions link1="r_bicept" link2="r_shoulder_ball" reason="Adjacent" />
+    <disable_collisions link1="r_elbow_ball" link2="r_forearm" reason="Adjacent" />
+    <disable_collisions link1="r_elbow_ball" link2="r_hand" reason="Never" />
+    <disable_collisions link1="r_elbow_ball" link2="r_shoulder_ball" reason="Never" />
+    <disable_collisions link1="r_elbow_ball" link2="r_wrist" reason="Never" />
+    <disable_collisions link1="r_forearm" link2="r_wrist" reason="Adjacent" />
+    <disable_collisions link1="r_hand" link2="r_wrist" reason="Adjacent" />
+</robot>

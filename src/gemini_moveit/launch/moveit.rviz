@@ -1,0 +1,619 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 85
+    Name: Displays
+    Property Tree Widget:
+      Expanded: ~
+      Splitter Ratio: 0.7425600290298462
+    Tree Height: 758
+  - Class: rviz/Help
+    Name: Help
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_bicpet:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_elbow_ball:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_forearm:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_hand:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_shoulder_ball:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_wrist:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_bicept:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_elbow_ball:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_forearm:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_hand:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_shoulder_ball:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_wrist:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_link:
+          Value: true
+        base_spine_0:
+          Value: true
+        base_spine_1:
+          Value: true
+        base_spine_2:
+          Value: true
+        base_spine_3:
+          Value: true
+        base_spine_4:
+          Value: true
+        base_spine_5:
+          Value: true
+        head_0:
+          Value: true
+        head_1:
+          Value: true
+        head_2:
+          Value: true
+        head_3:
+          Value: true
+        head_4:
+          Value: true
+        head_5:
+          Value: true
+        kinect_v2:
+          Value: true
+        l_bicpet:
+          Value: true
+        l_elbow_ball:
+          Value: true
+        l_forearm:
+          Value: true
+        l_hand:
+          Value: true
+        l_shoulder_ball:
+          Value: true
+        l_wrist:
+          Value: true
+        left_ankle_0:
+          Value: true
+        left_ankle_1:
+          Value: true
+        left_ankle_2:
+          Value: true
+        left_ankle_3:
+          Value: true
+        left_ankle_4:
+          Value: true
+        left_ankle_5:
+          Value: true
+        left_elbow_0:
+          Value: true
+        left_elbow_1:
+          Value: true
+        left_elbow_2:
+          Value: true
+        left_elbow_3:
+          Value: true
+        left_elbow_4:
+          Value: true
+        left_elbow_5:
+          Value: true
+        left_hand_0:
+          Value: true
+        left_hand_1:
+          Value: true
+        left_hand_2:
+          Value: true
+        left_hand_3:
+          Value: true
+        left_hand_4:
+          Value: true
+        left_hand_5:
+          Value: true
+        left_hip_0:
+          Value: true
+        left_hip_1:
+          Value: true
+        left_hip_2:
+          Value: true
+        left_hip_3:
+          Value: true
+        left_hip_4:
+          Value: true
+        left_hip_5:
+          Value: true
+        left_knee_0:
+          Value: true
+        left_knee_1:
+          Value: true
+        left_knee_2:
+          Value: true
+        left_knee_3:
+          Value: true
+        left_knee_4:
+          Value: true
+        left_knee_5:
+          Value: true
+        left_shoulder_0:
+          Value: true
+        left_shoulder_1:
+          Value: true
+        left_shoulder_2:
+          Value: true
+        left_shoulder_3:
+          Value: true
+        left_shoulder_4:
+          Value: true
+        left_shoulder_5:
+          Value: true
+        neck_0:
+          Value: true
+        neck_1:
+          Value: true
+        neck_2:
+          Value: true
+        neck_3:
+          Value: true
+        neck_4:
+          Value: true
+        neck_5:
+          Value: true
+        r_bicept:
+          Value: true
+        r_elbow_ball:
+          Value: true
+        r_forearm:
+          Value: true
+        r_hand:
+          Value: true
+        r_shoulder_ball:
+          Value: true
+        r_wrist:
+          Value: true
+        right_ankle_0:
+          Value: true
+        right_ankle_1:
+          Value: true
+        right_ankle_2:
+          Value: true
+        right_ankle_3:
+          Value: true
+        right_ankle_4:
+          Value: true
+        right_ankle_5:
+          Value: true
+        right_elbow_0:
+          Value: true
+        right_elbow_1:
+          Value: true
+        right_elbow_2:
+          Value: true
+        right_elbow_3:
+          Value: true
+        right_elbow_4:
+          Value: true
+        right_elbow_5:
+          Value: true
+        right_hand_0:
+          Value: true
+        right_hand_1:
+          Value: true
+        right_hand_2:
+          Value: true
+        right_hand_3:
+          Value: true
+        right_hand_4:
+          Value: true
+        right_hand_5:
+          Value: true
+        right_hip_0:
+          Value: true
+        right_hip_1:
+          Value: true
+        right_hip_2:
+          Value: true
+        right_hip_3:
+          Value: true
+        right_hip_4:
+          Value: true
+        right_hip_5:
+          Value: true
+        right_knee_0:
+          Value: true
+        right_knee_1:
+          Value: true
+        right_knee_2:
+          Value: true
+        right_knee_3:
+          Value: true
+        right_knee_4:
+          Value: true
+        right_knee_5:
+          Value: true
+        right_shoulder_0:
+          Value: true
+        right_shoulder_1:
+          Value: true
+        right_shoulder_2:
+          Value: true
+        right_shoulder_3:
+          Value: true
+        right_shoulder_4:
+          Value: true
+        right_shoulder_5:
+          Value: true
+        shoulder_spine_0:
+          Value: true
+        shoulder_spine_1:
+          Value: true
+        shoulder_spine_2:
+          Value: true
+        shoulder_spine_3:
+          Value: true
+        shoulder_spine_4:
+          Value: true
+        shoulder_spine_5:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base_link:
+            l_shoulder_ball:
+              l_bicpet:
+                l_elbow_ball:
+                  l_forearm:
+                    l_wrist:
+                      l_hand:
+                        {}
+            r_shoulder_ball:
+              r_bicept:
+                r_elbow_ball:
+                  r_forearm:
+                    r_wrist:
+                      r_hand:
+                        {}
+          kinect_v2:
+            base_spine_0:
+              {}
+            base_spine_1:
+              {}
+            base_spine_2:
+              {}
+            base_spine_3:
+              {}
+            base_spine_4:
+              {}
+            base_spine_5:
+              {}
+            head_0:
+              {}
+            head_1:
+              {}
+            head_2:
+              {}
+            head_3:
+              {}
+            head_4:
+              {}
+            head_5:
+              {}
+            left_ankle_0:
+              {}
+            left_ankle_1:
+              {}
+            left_ankle_2:
+              {}
+            left_ankle_3:
+              {}
+            left_ankle_4:
+              {}
+            left_ankle_5:
+              {}
+            left_elbow_0:
+              {}
+            left_elbow_1:
+              {}
+            left_elbow_2:
+              {}
+            left_elbow_3:
+              {}
+            left_elbow_4:
+              {}
+            left_elbow_5:
+              {}
+            left_hand_0:
+              {}
+            left_hand_1:
+              {}
+            left_hand_2:
+              {}
+            left_hand_3:
+              {}
+            left_hand_4:
+              {}
+            left_hand_5:
+              {}
+            left_hip_0:
+              {}
+            left_hip_1:
+              {}
+            left_hip_2:
+              {}
+            left_hip_3:
+              {}
+            left_hip_4:
+              {}
+            left_hip_5:
+              {}
+            left_knee_0:
+              {}
+            left_knee_1:
+              {}
+            left_knee_2:
+              {}
+            left_knee_3:
+              {}
+            left_knee_4:
+              {}
+            left_knee_5:
+              {}
+            left_shoulder_0:
+              {}
+            left_shoulder_1:
+              {}
+            left_shoulder_2:
+              {}
+            left_shoulder_3:
+              {}
+            left_shoulder_4:
+              {}
+            left_shoulder_5:
+              {}
+            neck_0:
+              {}
+            neck_1:
+              {}
+            neck_2:
+              {}
+            neck_3:
+              {}
+            neck_4:
+              {}
+            neck_5:
+              {}
+            right_ankle_0:
+              {}
+            right_ankle_1:
+              {}
+            right_ankle_2:
+              {}
+            right_ankle_3:
+              {}
+            right_ankle_4:
+              {}
+            right_ankle_5:
+              {}
+            right_elbow_0:
+              {}
+            right_elbow_1:
+              {}
+            right_elbow_2:
+              {}
+            right_elbow_3:
+              {}
+            right_elbow_4:
+              {}
+            right_elbow_5:
+              {}
+            right_hand_0:
+              {}
+            right_hand_1:
+              {}
+            right_hand_2:
+              {}
+            right_hand_3:
+              {}
+            right_hand_4:
+              {}
+            right_hand_5:
+              {}
+            right_hip_0:
+              {}
+            right_hip_1:
+              {}
+            right_hip_2:
+              {}
+            right_hip_3:
+              {}
+            right_hip_4:
+              {}
+            right_hip_5:
+              {}
+            right_knee_0:
+              {}
+            right_knee_1:
+              {}
+            right_knee_2:
+              {}
+            right_knee_3:
+              {}
+            right_knee_4:
+              {}
+            right_knee_5:
+              {}
+            right_shoulder_0:
+              {}
+            right_shoulder_1:
+              {}
+            right_shoulder_2:
+              {}
+            right_shoulder_3:
+              {}
+            right_shoulder_4:
+              {}
+            right_shoulder_5:
+              {}
+            shoulder_spine_0:
+              {}
+            shoulder_spine_1:
+              {}
+            shoulder_spine_2:
+              {}
+            shoulder_spine_3:
+              {}
+            shoulder_spine_4:
+              {}
+            shoulder_spine_5:
+              {}
+      Update Interval: 0
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+  Value: true
+  Views:
+    Current:
+      Class: rviz/XYOrbit
+      Distance: 2.996500015258789
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0.6172125339508057
+        Y: -0.7076659202575684
+        Z: 2.2351798634190345e-7
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.3597968518733978
+      Target Frame: world
+      Value: XYOrbit (rviz)
+      Yaw: 5.29996919631958
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1018
+  Help:
+    collapsed: false
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd00000001000000000000030500000392fc0200000007fb000000100044006900730070006c006100790073010000004700000392000000f100fffffffb0000000800480065006c00700000000342000000bb0000008400fffffffb0000000a0056006900650077007300000003b0000000b0000000c200fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001e8000001f10000000000000000000004210000039200000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
+  Width: 1837
+  X: 83
+  Y: 34

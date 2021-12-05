@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="gemini_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.5342 0.31834 1.0008"
+        rpy="0 0 0" />
+      <mass
+        value="4.5293" />
+      <inertia
+        ixx="0.97293"
+        ixy="1.6785E-18"
+        ixz="-1.3902E-18"
+        iyy="0.04396"
+        iyz="-1.2852E-16"
+        izz="0.96599" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="r_shoulder_ball">
+    <inertial>
+      <origin
+        xyz="4.7354533627697E-09 4.96404695127239E-09 -0.0394697291071835"
+        rpy="0 0 0" />
+      <mass
+        value="0.0544711759133272" />
+      <inertia
+        ixx="4.16386318474761E-05"
+        ixy="-8.0073242821514E-11"
+        ixz="-1.20199057837973E-11"
+        iyy="4.62851094387099E-05"
+        iyz="-3.59209946912273E-11"
+        izz="3.82219025568903E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_shoulder_ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_shoulder_ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rs1"
+    type="continuous">
+    <origin
+      xyz="0.5342 -1.2006 1.1783"
+      rpy="1.5708 -0.0040924 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_shoulder_ball" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r_bicept">
+    <inertial>
+      <origin
+        xyz="-0.00100559107551867 2.46885547094955E-06 0.103420375905638"
+        rpy="0 0 0" />
+      <mass
+        value="0.272459883078294" />
+      <inertia
+        ixx="0.000714949499290936"
+        ixy="-1.17195329165907E-05"
+        ixz="-2.94068577155733E-09"
+        iyy="0.000573884889805494"
+        iyz="-2.9593981545266E-08"
+        izz="0.000255692740695556" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_bicept.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_bicept.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rs2"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.05"
+      rpy="0 -1.5481 1.5708" />
+    <parent
+      link="r_shoulder_ball" />
+    <child
+      link="r_bicept" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_elbow_ball">
+    <inertial>
+      <origin
+        xyz="5.579627426755E-09 3.33881822189852E-09 -0.0411716393287669"
+        rpy="0 0 0" />
+      <mass
+        value="0.0544711805998193" />
+      <inertia
+        ixx="4.16386350282787E-05"
+        ixy="-8.01710968297638E-11"
+        ixz="-7.08166952979222E-12"
+        iyy="4.62851156719021E-05"
+        iyz="-3.51591161331876E-11"
+        izz="3.82219030866654E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_elbow_ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_elbow_ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="re1"
+    type="continuous">
+    <origin
+      xyz="-0.0010053 0 0.24065"
+      rpy="-3.1416 0 0.00012242" />
+    <parent
+      link="r_bicept" />
+    <child
+      link="r_elbow_ball" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r_forearm">
+    <inertial>
+      <origin
+        xyz="-0.0007375298690393 0.000193675483442457 0.0951334467415538"
+        rpy="0 0 0" />
+      <mass
+        value="0.40633983271627" />
+      <inertia
+        ixx="0.000593959126155207"
+        ixy="3.33650513451329E-06"
+        ixz="5.63176013190523E-06"
+        iyy="0.000821848036104355"
+        iyz="8.81223757790784E-07"
+        izz="0.000304533144855543" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_forearm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_forearm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="re2"
+    type="continuous">
+    <origin
+      xyz="-7.2564E-05 0.021803 -0.27981"
+      rpy="0.095807 0.0031737 -0.033013" />
+    <parent
+      link="r_elbow_ball" />
+    <child
+      link="r_forearm" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="r_wrist">
+    <inertial>
+      <origin
+        xyz="0.0146201857300534 -1.66533453693773E-16 4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0120708298165579" />
+      <inertia
+        ixx="4.50218447918877E-06"
+        ixy="2.76278324592711E-22"
+        ixz="8.93024189312249E-21"
+        iyy="4.73440053913698E-06"
+        iyz="1.88464830764082E-20"
+        izz="1.51423045487237E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_wrist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_wrist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rw1"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0079263"
+      rpy="2.8806 1.5708 0" />
+    <parent
+      link="r_forearm" />
+    <child
+      link="r_wrist" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="r_hand">
+    <inertial>
+      <origin
+        xyz="0.00451726055781632 0.0619078942856783 -0.000800417659166719"
+        rpy="0 0 0" />
+      <mass
+        value="0.178970864822292" />
+      <inertia
+        ixx="0.000265184422516135"
+        ixy="2.96471793978179E-05"
+        ixz="-5.35801900737643E-07"
+        iyy="0.000136527540218109"
+        iyz="-2.81196869973056E-06"
+        izz="0.000391228774291645" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/r_hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rw2"
+    type="continuous">
+    <origin
+      xyz="0.030114 0 0"
+      rpy="1.4793 1.5708 0" />
+    <parent
+      link="r_wrist" />
+    <child
+      link="r_hand" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l_shoulder_ball">
+    <inertial>
+      <origin
+        xyz="6.2371143805251E-09 5.16012210738381E-09 0.0405440960537498"
+        rpy="0 0 0" />
+      <mass
+        value="0.0544711802480257" />
+      <inertia
+        ixx="4.16386347275612E-05"
+        ixy="-8.02979166423697E-11"
+        ixz="-9.44432761994934E-12"
+        iyy="4.62851153976195E-05"
+        iyz="-3.59594411893348E-11"
+        izz="3.82219033168237E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_shoulder_ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_shoulder_ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ls1"
+    type="continuous">
+    <origin
+      xyz="0.5342 -0.72092 1.1783"
+      rpy="1.5708 0.0040924 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_shoulder_ball" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l_bicept">
+    <inertial>
+      <origin
+        xyz="-3.22171699984608E-07 2.47687296439647E-06 0.103443210779643"
+        rpy="0 0 0" />
+      <mass
+        value="0.272459907071766" />
+      <inertia
+        ixx="0.000714949661933871"
+        ixy="-1.17195579489458E-05"
+        ixz="-2.95555807770357E-09"
+        iyy="0.000573884895229675"
+        iyz="-2.95084293710081E-08"
+        izz="0.00025569278491142" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_bicept.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_bicept.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ls2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.029008"
+      rpy="0 1.5481 -1.5708" />
+    <parent
+      link="l_shoulder_ball" />
+    <child
+      link="l_bicept" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_elbow_ball">
+    <inertial>
+      <origin
+        xyz="4.82088036157791E-09 6.76370126573289E-09 -0.0396882448554228"
+        rpy="0 0 0" />
+      <mass
+        value="0.0544711765716627" />
+      <inertia
+        ixx="4.16386322117842E-05"
+        ixy="-7.99853524244234E-11"
+        ixz="-1.39495005281165E-11"
+        iyy="4.6285109623003E-05"
+        iyz="-3.77840024472415E-11"
+        izz="3.82219023335045E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_elbow_ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_elbow_ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="le1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.24215"
+      rpy="-3.1416 0 -0.00012242" />
+    <parent
+      link="l_bicept" />
+    <child
+      link="l_elbow_ball" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l_forearm">
+    <inertial>
+      <origin
+        xyz="0.000836628746647805 0.0001935098308396 0.095132830953257"
+        rpy="0 0 0" />
+      <mass
+        value="0.406348916051301" />
+      <inertia
+        ixx="0.000594681973207758"
+        ixy="9.38620920126011E-06"
+        ixz="5.58091741728226E-06"
+        iyy="0.000821148239629605"
+        iyz="8.8769242386199E-07"
+        izz="0.000304538235611721" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_forearm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_forearm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="le2"
+    type="continuous">
+    <origin
+      xyz="0.0001066 0.021804 -0.27833"
+      rpy="0.095807 -0.0031737 0.033013" />
+    <parent
+      link="l_elbow_ball" />
+    <child
+      link="l_forearm" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l_wrist">
+    <inertial>
+      <origin
+        xyz="0.0133544170174819 -5.99520433297585E-15 -1.56541446472147E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.0120708298165578" />
+      <inertia
+        ixx="4.50218447918875E-06"
+        ixy="7.22955855371346E-22"
+        ixz="1.2573145310806E-21"
+        iyy="4.73440053913696E-06"
+        iyz="1.59612770998232E-20"
+        izz="1.51423045487236E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_wrist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_wrist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lw1"
+    type="continuous">
+    <origin
+      xyz="-3.4055E-05 0 -0.0091921"
+      rpy="2.8806 1.5708 0" />
+    <parent
+      link="l_forearm" />
+    <child
+      link="l_wrist" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l_hand">
+    <inertial>
+      <origin
+        xyz="0.00451090631976592 0.0619058412886233 -0.00080034540265006"
+        rpy="0 0 0" />
+      <mass
+        value="0.178955913206803" />
+      <inertia
+        ixx="0.000265161033087422"
+        ixy="2.96325083189168E-05"
+        ixz="-5.30420776755232E-07"
+        iyy="0.00013652876323698"
+        iyz="-2.8119585320385E-06"
+        izz="0.000391206453798622" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gemini_urdf/meshes/l_hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lw2"
+    type="continuous">
+    <origin
+      xyz="0.028848 0 0"
+      rpy="0.64526 -1.5708 -2.1229" />
+    <parent
+      link="l_wrist" />
+    <child
+      link="l_hand" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>

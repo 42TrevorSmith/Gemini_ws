@@ -1,0 +1,115 @@
+
+
+
+1) subscribe to the kinect user message or tf framework
+
+		case	0:return	"base_spine"; break;
+		case	1:return	"neck"; break;
+		case	2:return	"head"; break;
+		case	3:return	"left_shoulder"; break;
+		case	4:return	"left_elbow"; break;
+		case	5:return	"left_hand"; break;
+		case	6:return	"right_shoulder"; break;
+		case	7:return	"right_elbow"; break;
+		case	8:return	"right_hand"; break;
+		case	9:return	"left_hip"; break;
+		case	10:return	"left_knee"; break;
+		case	11:return	"left_ankle"; break;
+		case	12:return	"right_hip"; break;
+		case	13:return	"right_knee"; break;
+		case	14:return	"right_ankle"; break;
+		case	15:return	"shoulder_spine"; break;
+
+1.5) extract data out of the user message
+	//---------------------------------------------------------------------------------------------------------------
+	void publishTransform(const kinect_v2::BodyJoints &user_i, int user_id, int joint_id)
+	{
+		static tf2_ros::TransformBroadcaster br;
+		geometry_msgs::TransformStamped transformStamped;
+
+		transformStamped.header.stamp = ros::Time::now();
+		transformStamped.header.frame_id = "kinect_v2";
+		transformStamped.child_frame_id = get_key_name(joint_id) + "_" + to_string(user_id);
+		transformStamped.transform.translation.x = user_i.joints[joint_id].position.x;
+		transformStamped.transform.translation.y = user_i.joints[joint_id].position.y;
+		transformStamped.transform.translation.z = user_i.joints[joint_id].position.z;
+		transformStamped.transform.rotation.w = user_i.joints[joint_id].orientation.w;
+		transformStamped.transform.rotation.x = user_i.joints[joint_id].orientation.x;
+		transformStamped.transform.rotation.y = user_i.joints[joint_id].orientation.y;
+		transformStamped.transform.rotation.z = user_i.joints[joint_id].orientation.z;
+
+		br.sendTransform(transformStamped);
+	}
+	//-----------------------------------------------------------------------------------------------------------------
+	
+	ros::Subscriber sub_0 = n.subscribe("user_0", 1, &callback_0);
+
+	void callback_0(const kinect_v2::BodyJoints &user_0)
+	{
+		for (int joint_id = 0; joint_id < 16; ++joint_id){
+			jointX = user_i.joints[joint_id].position.x;
+			jointY = user_i.joints[joint_id].position.y;
+			jointZ = user_i.joints[joint_id].position.z;
+		}
+	}
+	
+	
+
+2) convert from cartesian [x,y,z] to spherical coordinates [theta, phi , r] 
+
+	//Right shoulder:	"right_elbow" - "right_shoulder" --> [dx,dy,dz] --> RS[theta,phi,r] == [rs1, rs2]
+
+	//Right elbow:	"right_wrist" - "right_elbow" --> [dx,dy,dz] --> RE[theta,phi,r] == [re1, re2]
+
+	//Right wrist: 
+
+	//Left shoulder:	"left_elbow" - "left_shoulder" --> [dx,dy,dz] --> LS[theta,phi,r] == [ls1, ls2]
+
+	//Left elbow:	"left_wrist" - "left_elbow" --> [dx,dy,dz] --> LE[theta,phi,r] == [le1, le2]
+
+	//Left wrist:	
+
+
+
+3) assign the spherical coordinates to joints [rs1, rs2, re1, re2, rw1, rw2, ls1, ls2, le1, le2, lw1, lw2]
+
+	RS[theta,phi,r] == [rs1, rs2]
+	RE[theta,phi,r] == [re1, re2]
+	LS[theta,phi,r] == [ls1, ls2]
+	LE[theta,phi,r] == [le1, le2]
+	
+	"new_joints" = [rs1, rs2, re1, re2, rw1, rw2, ls1, ls2, le1, le2, lw1, lw2]
+
+4) validate all of the joint states
+	a) make sure that they are within bounds:  [-3.14 -- 3.14]
+	b) make sure the change is not too drastic: |"new_joints" - "/joint_states"| < 20 degrees
+
+
+
+5) publish joint states
+	---
+	header: 
+	  seq: 12511
+	  stamp: 
+	    secs: 1251
+	    nsecs:         0
+	  frame_id: ''
+	name: [rs1, rs2, re1, re2, rw1, rw2, ls1, ls2, le1, le2, lw1, lw2]
+	position: [-2.758318349851838, 1.638654728112436, 1.7341591447815663, 2.1199467226423927, -0.997769826780118, 0.709999939711293, -1.6794954326091034, 0.6723008278682157, -2.198486538982137, -2.093557344352238, -0.6942919764433442, 1.5029379254773572]
+	velocity: []
+	effort: []
+	---
+
+
+self.pub = rospy.Publisher('joint_states', sensor_msgs.msg.JointState, queue_size=5)
+
+msg = sensor_msgs.msg.JointState()
+msg.header.stanp = rospy.Time.now()
+msg.position = "new_joints"
+self.pub.publish(msg)
+
+
+
+
+
+

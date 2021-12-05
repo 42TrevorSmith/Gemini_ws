@@ -1,0 +1,8 @@
+to run the simulation run the code
+
+rosrun rosserial_python serial_node.py tcp (ubuntu)
+run local debunger on the kinect_v2 solution (windows) NOTE: MAKE SURE IP ADRESS IS CORRECT FOR THE UBUNTU MACHINE
+
+roslaunch kinect_bridge gemini_sim.launch
+rosrun kinect_bridge kinect_bridge
+
