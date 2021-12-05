@@ -1,5 +1,8 @@
 # gemini_ws
-honors excel gemini project code repo
+First person humanoid telepresece robot
+
+# cad models found here 
+https://grabcad.com/library/gemini-9  
 
 # setup
 follow tutorial for kinect setup here
